@@ -1,9 +1,9 @@
-import React, { useContext, useState } from "react";
+
 import { Box, Typography } from "@mui/material";
-import { Spa } from "@mui/icons-material"; // This is the leaf-style icon
+
 import leafLogo from "../images/logo.png";
 
-const Logo = ({ fontSize = "24px", iconSize = 30 }) => {
+const Logo = ({ fontSize = "24px",  }) => {
  
   return (
     <Box

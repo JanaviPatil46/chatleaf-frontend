@@ -147,11 +147,11 @@ export default function Register() {
 
   const navigate = useNavigate();
 
- const [isLoading, setIsLoading] = useState(false);
+//  const [isLoading, setIsLoading] = useState(false);
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-  setIsLoading(true);
+  setLoading(true);
 
   try {
     const response = await register(formData);
@@ -180,7 +180,7 @@ const handleSubmit = async (e) => {
     toast.error(errorMsg);
 
   } finally {
-    setIsLoading(false);
+    setLoading(false);
   }
 };
   return (
