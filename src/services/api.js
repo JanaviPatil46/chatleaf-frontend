@@ -1,33 +1,8 @@
-// import axios from 'axios'
 
-// const API_URL = "http://127.0.0.1:5000/api"
-
-// const api = axios.create({
-//     baseURL: API_URL,
-//     headers:{"Content-Type":"application/json"},
-//     timeout:30000,
-// });
-
-// // AUTH ENDPOINTS
-// export const register = async(userData)=>{
-//   const response =  api.post("/auth/register",userData);
-//   // 2. Log before the return, otherwise it never executes
-//     // console.log("Response data:", response);
-//   return response.data;
-
-// }
-
-// export const login = async(userData)=>{
-//   const response =  api.post("/auth/login",userData);
-//   // 2. Log before the return, otherwise it never executes
-//     // console.log("Response data:", response);
-//   return response.data;
-
-// }
 
 import axios from "axios";
 
-const API_URL = "https://chatleaf-backend.netlify.app/api";
+const API_URL = "https://chit-chat-backend-ad6x.onrender.com/api";
 
 const api = axios.create({
   baseURL: API_URL,
@@ -68,10 +43,6 @@ export const login = async (data) => {
   return res.data;
 };
 
-// export const updateProfile = async (data) => {
-//   const res = await api.put("/users/profile", data);
-//   return res.data;
-// };
 
 export const updateProfile = async (formData) => {
   try {
