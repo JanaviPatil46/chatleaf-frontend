@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-const API_URL = "https://chatleaf-backend.netlify.app";
+const API_URL = "https://chatleaf-message.onrender.com";
 
 const api = axios.create({
   baseURL: API_URL,
