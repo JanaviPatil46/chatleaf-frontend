@@ -34,12 +34,15 @@ api.interceptors.response.use((response)=> response,(error)=>{
 // REGISTER
 export const register = async (data) => {
   const res = await api.post("/api/auth/register", data);
+
+    console.log("responce data".res)
   return res.data;
 };
 
 // LOGIN
 export const login = async (data) => {
   const res = await api.post("/api/auth/login", data);
+
   return res.data;
 };
 
