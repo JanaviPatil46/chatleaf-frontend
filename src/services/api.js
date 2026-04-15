@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-const API_URL = "https://chit-chat-backend-ad6x.onrender.com/api";
+const API_URL = "https://chatleaf-backend.netlify.app/api";
 
 const api = axios.create({
   baseURL: API_URL,
