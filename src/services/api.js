@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-const API_URL = "https://chatleaf-backend.netlify.app/api";
+const API_URL = "https://chatleaf-backend.netlify.app";
 
 const api = axios.create({
   baseURL: API_URL,
@@ -33,20 +33,20 @@ api.interceptors.response.use((response)=> response,(error)=>{
 
 // REGISTER
 export const register = async (data) => {
-  const res = await api.post("/auth/register", data);
+  const res = await api.post("/api/auth/register", data);
   return res.data;
 };
 
 // LOGIN
 export const login = async (data) => {
-  const res = await api.post("/auth/login", data);
+  const res = await api.post("/api/auth/login", data);
   return res.data;
 };
 
 
 export const updateProfile = async (formData) => {
   try {
-    const res = await api.put("/users/profile", formData, {
+    const res = await api.put("/api/users/profile", formData, {
       headers: {
         "Content-Type": "multipart/form-data", // Crucial for file uploads
       },
@@ -62,22 +62,22 @@ export const updateProfile = async (formData) => {
 };
 
 export const getAllUsers = async () => {
-  const res = await api.get("/users");
+  const res = await api.get("/api/users");
   return res.data;
 };
 
 export const getConversationMessage = async (reciepientId) => {
-  const res = await api.get(`/messages/${reciepientId}`);
+  const res = await api.get(`/api/messages/${reciepientId}`);
   return res.data;
 };
 
 export const sendMessage = async (messageData) => {
-  const res = await api.post("/messages/send", messageData);
+  const res = await api.post("/api/messages/send", messageData);
   return res.data;
 };
 
 export const uploadFile = async (formData) => {
-  const res = await api.post("/messages/upload", formData, {
+  const res = await api.post("/api/messages/upload", formData, {
     headers: { "Content-Type": "multipart/form-Data" },
   });
   return res.data;
